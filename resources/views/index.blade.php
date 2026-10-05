@@ -77,7 +77,7 @@
                     @empty
                         <h1>Não há projetos cadastrados</h1>
                     @endforelse
-                    @includewhen($paginacao, 'parciais._paginacao')
+                    @includefirst(['site.parciais._paginacao', 'parciais._paginacao', 'main._paginacao'])
                 </div>
             </div>
         </section>
