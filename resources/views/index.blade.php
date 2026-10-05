@@ -67,7 +67,7 @@
                     @forelse ($projetos as $projeto)
                         @continue($projeto['ativo'] === false)
                     <div class="col-md-6 col-lg-4 mb-5">
-                        <div class="portfolio-item mx-auto" data-bs-toggle="modal" data-bs-target="#portfolioModal1">
+                        <div class="portfolio-item mx-auto" data-bs-toggle="modal" data-bs-target="#portfolioModal{{$loop->iteration}}">
                             <div class="portfolio-item-caption d-flex align-items-center justify-content-center h-100 w-100">
                                 <div class="portfolio-item-caption-content text-center text-white"><i class="fas fa-plus fa-3x"></i></div>
                             </div>
@@ -77,13 +77,7 @@
                     @empty
                         <h1>Não há projetos cadastrados</h1>
                     @endforelse
-                    <nav aria-label="Page navigation example" style="margin-top: 50px;">
-                        <ul class="pagination pagination-lg justify-content-center">
-                            @for ($i = 1; $i < 10; $i++)
-                                <li class="page-item"><a class="page-link" href="#">{{ $i }}</a></li>
-                            @endfor
-                        </ul>
-                    </nav>
+                    @include('parciais._paginacao')
                 </div>
             </div>
         </section>
