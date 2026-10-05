@@ -3,7 +3,28 @@
 use Illuminate\Support\Facades\Route;
 
 Route::get('/', function () {
-    return view('index');
+    return view('index', [
+        'projetos' => [
+            [
+                'imagem' => 'cabin.png',
+            ],
+            [
+                'imagem' => 'cake.png',
+            ],
+            [
+                'imagem' => 'circus.png',
+            ],
+            [
+                'imagem' => 'game.png',
+            ],
+            [
+                'imagem' => 'safe.png',
+            ],
+            [
+                'imagem' => 'submarine.png',
+            ]
+        ]
+    ]);
 });
 
 Route::get('/passagem/dados', function () {
