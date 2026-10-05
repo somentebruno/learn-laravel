@@ -26,10 +26,25 @@
                     <i class="fas fa-bars"></i>
                 </button>
                 <div class="collapse navbar-collapse" id="navbarResponsive">
+                    @php
+                        $itensMenu = [
+                            [
+                                'descricao' => 'Portfolio',
+                                'link' => '#portfolio'
+                            ],
+                            [
+                                'descricao' => 'Sobre',
+                                'link' => '#about'
+                            ],
+                            [
+                                'descricao' => 'Contato',
+                                'link' => '#contact'
+                            ]                            
+                        ];
+                    @endphp
+                    
                     <ul class="navbar-nav ms-auto">
-                        <li class="nav-item mx-0 mx-lg-1"><a class="nav-link py-3 px-0 px-lg-3 rounded" href="#portfolio">Portfolio</a></li>
-                        <li class="nav-item mx-0 mx-lg-1"><a class="nav-link py-3 px-0 px-lg-3 rounded" href="#about">About</a></li>
-                        <li class="nav-item mx-0 mx-lg-1"><a class="nav-link py-3 px-0 px-lg-3 rounded" href="#contact">Contact</a></li>
+                        @each ('parciais._itens_menu', $itensMenu, 'item')
                     </ul>
                 </div>
             </div>
@@ -77,7 +92,10 @@
                     @empty
                         <h1>Não há projetos cadastrados</h1>
                     @endforelse
-                    @includefirst(['site.parciais._paginacao', 'parciais._paginacao', 'main._paginacao'])
+
+                    @include('site.parciais._paginacao', ['first' => '<<', 'last' => '>>'])
+
+                    {{-- @includefirst(['site.parciais._paginacao', 'parciais._paginacao', 'main._paginacao']) --}}
                 </div>
             </div>
         </section>
