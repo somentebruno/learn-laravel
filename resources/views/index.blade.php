@@ -77,7 +77,7 @@
                     @empty
                         <h1>Não há projetos cadastrados</h1>
                     @endforelse
-                    @include('parciais._paginacao')
+                    @includewhen($paginacao, 'parciais._paginacao')
                 </div>
             </div>
         </section>
