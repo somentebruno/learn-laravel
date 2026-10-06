@@ -4,6 +4,8 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\SiteHerancaController;
 
 Route::get('/site/heranca', [SiteHerancaController::class, 'home']);
+Route::get('/site/heranca/portfolio', [SiteHerancaController::class, 'portfolio'])
+    ->name('site.heranca.portfolio');
 Route::get('/site/portfolio', [SiteHerancaController::class, 'portfolio']);
 Route::get('/site/sobre', [SiteHerancaController::class, 'sobre']);
 Route::get('/site/contato', [SiteHerancaController::class, 'contato']);
@@ -75,5 +77,4 @@ Route::get('/condicional/switch', function () {
         'mes' => ''
     ]);
 });
-
 
