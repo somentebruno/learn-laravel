@@ -28,3 +28,11 @@
             </div>
         </section>
 @endsection
+
+
+@section('texto-rodape')
+    
+    <p class="lead mb-0">
+        Obrigado por visitar o site. Este é um projeto de estudo do curso de Blade.
+    </p>@parent
+@endsection
