@@ -1,6 +1,6 @@
-@props(['link', 'titulo' => 'Meu valor padrão'])
+@props(['titulo' => 'Meu valor padrão'])
 
-<a class="btn btn-xl btn-outline-light" href="{{ $link }}">
+<a {{ $attributes->merge(['class'=>"btn  btn-outline-light"]) }}>
     <i class="fas fa-download me-2"></i>
     {{ $titulo }}
 </a>
