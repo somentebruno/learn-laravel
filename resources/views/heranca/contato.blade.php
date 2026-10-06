@@ -1,5 +1,7 @@
 @extends('heranca.layout')
 
+@section('titulo-pagina', 'Contato')
+
 @section('conteudo-principal')
     <!-- Contact Section-->
         <section class="page-section" id="contact">

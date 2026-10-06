@@ -1,4 +1,5 @@
 @extends('heranca.layout')
+@section('titulo-pagina', 'Sobre')
 
 @section('conteudo-principal')
     <!-- About Section-->

@@ -1,5 +1,5 @@
 @extends('heranca.layout')
-
+@section('titulo-pagina', 'Página de Portfólio')
 @section('conteudo-principal')
 <!-- Portfolio Section-->
         <section class="page-section portfolio" id="portfolio">
