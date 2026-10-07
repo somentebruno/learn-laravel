@@ -25,24 +25,7 @@
                     Menu
                     <i class="fas fa-bars"></i>
                 </button>
-                <div class="collapse navbar-collapse" id="navbarResponsive">
-                    @php
-                        $itensMenu = [
-                            [
-                                'descricao' => 'Portfolio',
-                                'link' => route('site.heranca.portfolio')
-                            ],
-                            [
-                                'descricao' => 'Sobre',
-                                'link' => route('site.heranca.sobre')
-                            ],
-                            [
-                                'descricao' => 'Contato',
-                                'link' => route('site.heranca.contato')
-                            ]                            
-                        ];
-                    @endphp
-                    
+                <div class="collapse navbar-collapse" id="navbarResponsive">                    
                     <ul class="navbar-nav ms-auto">
                         @each ('parciais._itens_menu', $itensMenu, 'item')
                     </ul>

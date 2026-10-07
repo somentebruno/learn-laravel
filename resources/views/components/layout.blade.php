@@ -26,23 +26,6 @@
                     <i class="fas fa-bars"></i>
                 </button>
                 <div class="collapse navbar-collapse" id="navbarResponsive">
-                    @php
-                        $itensMenu = [
-                            [
-                                'descricao' => 'Portfolio',
-                                'link' => route('site.componente.portfolio')
-                            ],
-                            [
-                                'descricao' => 'Sobre',
-                                'link' => route('site.componente.sobre')
-                            ],
-                            [
-                                'descricao' => 'Contato',
-                                'link' => route('site.componente.contato')
-                            ]                            
-                        ];
-                    @endphp
-                    
                     <ul class="navbar-nav ms-auto">
                         @each ('parciais._itens_menu', $itensMenu, 'item')
                     </ul>
