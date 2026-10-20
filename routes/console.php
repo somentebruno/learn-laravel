@@ -2,6 +2,7 @@
 
 use Illuminate\Foundation\Inspiring;
 use Illuminate\Support\Facades\Artisan;
+<<<<<<< HEAD
 use Illuminate\Support\Facades\Schedule;
 
 /*
@@ -31,3 +32,9 @@ Artisan::command('inspire', function () {
 */
 
 Schedule::command('inspire')->hourly();
+=======
+
+Artisan::command('inspire', function () {
+    $this->comment(Inspiring::quote());
+})->purpose('Display an inspiring quote')->hourly();
+>>>>>>> 1558902e598bf3bdf2d34d62f8796f210570471b
