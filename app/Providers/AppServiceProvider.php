@@ -3,10 +3,7 @@
 namespace App\Providers;
 
 use Illuminate\Support\ServiceProvider;
-<<<<<<< HEAD
-=======
 use Illuminate\Support\Facades\View;
->>>>>>> 1558902e598bf3bdf2d34d62f8796f210570471b
 
 class AppServiceProvider extends ServiceProvider
 {
@@ -23,9 +20,6 @@ class AppServiceProvider extends ServiceProvider
      */
     public function boot(): void
     {
-<<<<<<< HEAD
-        //
-=======
         View::composer('components.layout', function ($view){
             $itensMenu = [
                 [
@@ -61,7 +55,5 @@ class AppServiceProvider extends ServiceProvider
             ];
             $view->with('itensMenu', $itensMenu);
         });
-
->>>>>>> 1558902e598bf3bdf2d34d62f8796f210570471b
     }
 }

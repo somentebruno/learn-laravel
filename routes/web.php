@@ -1,38 +1,9 @@
 <?php
 
-<<<<<<< HEAD
 use App\Http\Controllers\ClienteController;
-use App\Http\Controllers\SiteController;
-use App\Http\Controllers\VerServicos;
-use Illuminate\Support\Facades\Route;
-
-/*
-|--------------------------------------------------------------------------
-| Web Routes
-|--------------------------------------------------------------------------
-|
-| Here is where you can register web routes for your application. These
-| routes are loaded within the "web" middleware group which includes
-| sessions, cookie encryption, and more. Go build something great!
-|
-*/
-
-Route::get('/', function () {
-    return view('welcome');
-});
-
-// Route::get('home', [SiteController::class, 'home']);
-// Route::get('contato', [SiteController::class, 'contato']);
-// Route::get('sobre', [SiteController::class, 'sobre']);
-// Route::get('servico/{codigo?}', VerServicos::class);
-
-Route::get('clientes', [ClienteController::class, 'index']);
-Route::get('clientes/create', [ClienteController::class, 'create']);
-Route::post('clientes', [ClienteController::class, 'store']);
-=======
-use Illuminate\Support\Facades\Route;
-use App\Http\Controllers\SiteHerancaController;
 use App\Http\Controllers\SiteComponenteController;
+use App\Http\Controllers\SiteHerancaController;
+use Illuminate\Support\Facades\Route;
 
 Route::get('/site/heranca', [SiteHerancaController::class, 'home'])->name('site.heranca.home');
 Route::get('/site/heranca/portfolio', [SiteHerancaController::class, 'portfolio'])->name('site.heranca.portfolio');
@@ -69,6 +40,10 @@ Route::get('/', function () {
         ]
     ]);
 });
+
+Route::get('clientes', [ClienteController::class, 'index']);
+Route::get('clientes/create', [ClienteController::class, 'create']);
+Route::post('clientes', [ClienteController::class, 'store']);
 
 Route::get('/passagem/dados', function () {
     return view('exemplos/passagem_dados', [
@@ -111,5 +86,3 @@ Route::get('/condicional/switch', function () {
         'mes' => ''
     ]);
 });
-
->>>>>>> 1558902e598bf3bdf2d34d62f8796f210570471b

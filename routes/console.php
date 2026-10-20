@@ -2,7 +2,6 @@
 
 use Illuminate\Foundation\Inspiring;
 use Illuminate\Support\Facades\Artisan;
-<<<<<<< HEAD
 use Illuminate\Support\Facades\Schedule;
 
 /*
@@ -20,21 +19,4 @@ Artisan::command('inspire', function () {
     $this->comment(Inspiring::quote());
 })->purpose('Display an inspiring quote');
 
-/*
-|--------------------------------------------------------------------------
-| Console Schedule
-|--------------------------------------------------------------------------
-|
-| Below you may define your scheduled tasks, including console commands
-| or system commands. These tasks will be run automatically when due
-| using Laravel's built-in "schedule:run" Artisan console command.
-|
-*/
-
 Schedule::command('inspire')->hourly();
-=======
-
-Artisan::command('inspire', function () {
-    $this->comment(Inspiring::quote());
-})->purpose('Display an inspiring quote')->hourly();
->>>>>>> 1558902e598bf3bdf2d34d62f8796f210570471b
