@@ -15,4 +15,11 @@ class Funcionario extends Model
 
     const CREATED_AT = 'data_criacao';
     const UPDATED_AT = 'data_atualizacao';
+
+
+    // um funcionario tem um endereco
+    public function endereco()
+    {
+        return $this->hasOne(Endereco::class, 'codigo_fun', 'codigo');
+    }
 }

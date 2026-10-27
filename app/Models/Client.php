@@ -15,4 +15,14 @@ class Client extends Model
         'descricao',
         'email'
     ];
+
+    /**
+     * Um cliente tem muitos projetos
+     * @return void
+     */
+    public function projects()
+    {
+        return $this->hasMany(Project::class);
+    }
+
 }
