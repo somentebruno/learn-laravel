@@ -21,4 +21,13 @@ class Employee extends Model
         'created_at',
         'updated_at'
     ];
+
+    /**
+     * Get the address associated with the employee.
+     * @return HasOne
+     */
+    public function address()
+    {
+        return $this->hasOne(Address::class);
+    }
 }
