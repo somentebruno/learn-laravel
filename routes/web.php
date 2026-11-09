@@ -45,6 +45,8 @@ Route::get('clientes', [ClienteController::class, 'index']);
 Route::get('clientes/create', [ClienteController::class, 'create']);
 Route::post('clientes', [ClienteController::class, 'store']);
 
+Route::livewire('/contador', 'contador');
+
 Route::get('/passagem/dados', function () {
     return view('exemplos/passagem_dados', [
         'nome' => 'TreinaWeb',
